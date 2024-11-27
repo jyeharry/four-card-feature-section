@@ -10,8 +10,13 @@
 
   --gutter: 2rem;
   --row-gap: 1.5rem;
+  --border-radius: 0.5rem;
   --space-xl: 5.625rem;
   --space-lg: 5rem;
+  --space-md: 2rem;
+  --space-sm: 1.5rem;
+  --space-xs: 0.5rem;
+  --space-xxs: 0.25rem;
 }
 
 body {
@@ -39,7 +44,7 @@ h1, h2 {
   color: var(--very-dark-blue);
 }
 
-hgroup {
+.feature-intro {
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
@@ -51,5 +56,38 @@ hgroup {
 }
 
 .card-grid {
-  margin: var(--space-lg);
+  margin-block: var(--space-lg);
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.card {
+  padding: var(--gutter);
+  background: white;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  box-shadow: 0 0.5rem 2rem -1rem var(--grayish-blue);
+
+  &.card--red {
+    border-top: var(--space-xxs) solid var(--red);
+	}
+
+  &.card--cyan {
+    border-top: var(--space-xxs) solid var(--cyan);
+	}
+
+  &.card--orange {
+    border-top: var(--space-xxs) solid var(--orange);
+	}
+
+  &.card--blue {
+    border-top: var(--space-xxs) solid var(--blue);
+	}
+}
+
+.card__img-wrapper {
+  margin-left: auto;
+  margin-top: var(--space-sm);
 }
