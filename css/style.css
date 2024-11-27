@@ -65,14 +65,10 @@ h2 {
   margin-block: var(--space-lg);
   display: grid;
   gap: var(--fluid-24-32);
-  grid-auto-columns: auto;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(min(17rem, 22rem), 1fr));
 
   @media screen and (min-width: 928px) {
-    grid-template-columns: repeat(3, minmax(15rem, 22rem));
-    grid-template-rows: repeat(4, 1fr);
-
     & > :first-child {
       grid-column: 1;
     }
